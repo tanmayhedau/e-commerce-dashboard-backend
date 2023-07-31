@@ -4,7 +4,10 @@ const User = require("./db/User");
 const Product = require("./db/Product");
 const cors = require("cors");
 const Jwt = require("jsonwebtoken");
-const jwtKey = "e-comm";
+const dotenv = require("dotenv");
+
+dotenv.config();
+const jwtKey = process.env.JWTKEY;
 const app = express();
 
 app.use(express.json());
